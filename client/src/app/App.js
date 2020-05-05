@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import { CharactersPage, HomePage, NotFoundPage } from './pages';
-import { Header } from './components/layout';
+import { Footer, Header } from './components/layout';
 
 import './App.css';
 
@@ -36,6 +36,7 @@ function App() {
             <NotFoundPage />
           </Route>
         </Switch>
+        <Footer />
       </Router>           
     </div>
   );
