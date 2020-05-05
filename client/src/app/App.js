@@ -1,28 +1,37 @@
 import React, { useEffect, useState} from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-import { MarvelApi } from './services';
+import { CharactersPage, HomePage } from './pages';
 
 import './App.css';
-import { MarvelCharacterList } from './components';
 
 function App() {
-  const [searchCharactersResults, setSearchCharactersResults] = useState(null);
-  
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async (q) => {
-    const json = await MarvelApi.getCharactersResults(q);
-    console.log(json);
-    setSearchCharactersResults(json);
-  };  
-
   return (
     <div className="app">
-      <div className="container">
-        <MarvelCharacterList characters={(searchCharactersResults !== null)? searchCharactersResults.data.results:[]} />
-      </div>      
+      <Router>
+        <Switch>
+          <Route exact path="/comics">
+            <p>Comics</p>
+          </Route>
+          <Route exact path="/characters">
+            <CharactersPage />
+          </Route>
+          <Route exact path="/series">
+            <p>Series</p>
+          </Route>
+          <Route exact path="/stories">
+            <p>Stories</p>
+          </Route>
+          <Route path="/">
+            <HomePage />
+          </Route>
+        </Switch>
+      </Router>           
     </div>
   );
 }
