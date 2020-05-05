@@ -14,14 +14,14 @@ function App() {
 
   const fetchData = async (q) => {
     const json = await MarvelApi.getCharactersResults(q);
-    console.log(json)
+
     setSearchCharactersResults(json);
   };  
 
   return (
     <div className="app">
       <div className="container">
-        <MarvelCharacterList characters={searchCharactersResults} />
+        <MarvelCharacterList characters={(searchCharactersResults !== null)? searchCharactersResults.data.results:[]} />
       </div>      
     </div>
   );
