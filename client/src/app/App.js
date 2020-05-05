@@ -6,14 +6,16 @@ import {
   Link
 } from "react-router-dom";
 
-import { CharactersPage, HomePage } from './pages';
+import { CharactersPage, HomePage, NotFoundPage } from './pages';
+import { Header } from './components/layout';
 
 import './App.css';
 
 function App() {
   return (
-    <div className="app">
+    <div className="app">      
       <Router>
+        <Header />
         <Switch>
           <Route exact path="/comics">
             <p>Comics</p>
@@ -27,8 +29,11 @@ function App() {
           <Route exact path="/stories">
             <p>Stories</p>
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <HomePage />
+          </Route>
+          <Route>
+            <NotFoundPage />
           </Route>
         </Switch>
       </Router>           
