@@ -1,0 +1,17 @@
+.marvel-list {
+
+}
+
+.marvel-list > div {
+  margin-bottom: 30px;
+}
+
+.marvel-list .marvel-character {
+
+}
+
+.marvel-list .marvel-character .picture > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

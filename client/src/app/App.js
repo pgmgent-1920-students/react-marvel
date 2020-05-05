@@ -14,7 +14,7 @@ function App() {
 
   const fetchData = async (q) => {
     const json = await MarvelApi.getCharactersResults(q);
-
+    console.log(json);
     setSearchCharactersResults(json);
   };  
 
