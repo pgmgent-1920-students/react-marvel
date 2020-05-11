@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://pgmgent-1920-students.github.io/react-marvel/",
   "dependencies": {
+    "bootstrap": "^4.4.1",
     "cra-template": "1.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -34,6 +35,7 @@
   },
   "devDependencies": {
     "cpy-cli": "^3.1.1",
+    "node-sass": "^4.14.1",
     "rimraf": "^3.0.2"
   }
 }

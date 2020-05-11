@@ -2,7 +2,7 @@ import React from 'react';
 
 import MarvelCharacter from './MarvelCharacter';
 
-import './MarvelCharacterList.css';
+import './MarvelCharacterList.scss';
 
 class MarvelCharacterList extends React.Component {
   constructor(props) {

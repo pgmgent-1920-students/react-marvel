@@ -9,7 +9,7 @@ import {
 import { CharactersPage, HomePage, NotFoundPage } from './pages';
 import { Footer, Header } from './components/layout';
 
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
