@@ -14,7 +14,7 @@ import './App.css';
 function App() {
   return (
     <div className="app">      
-      <Router>
+      <Router basename="react-marvel">
         <Header />
         <Switch>
           <Route exact path="/comics">
